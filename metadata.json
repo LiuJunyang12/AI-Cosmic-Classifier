@@ -1,0 +1,6 @@
+{
+  "name": "AI Cosmic Classifier",
+  "description": "Vera C. Rubin Observatory deep space survey training engine and neural pattern recognition game.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

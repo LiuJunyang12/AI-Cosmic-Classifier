@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+
+  --color-cyber-bg: #060813;
+  --color-cyber-card: rgba(15, 23, 42, 0.75);
+  --color-cyber-border: #00f2fe;
+  --color-cyber-accent: #00f2fe;
+  --color-cyber-purple: #7928ca;
+  --color-cyber-pink: #ff0080;
+  --color-cyber-infrared: #ff5e36;
+  --color-cyber-xray: #9d00ff;
+  --color-cyber-amber: #ffb800;
+
+  --shadow-glow-cyan: 0 0 20px rgba(0, 242, 254, 0.35);
+  --shadow-glow-pink: 0 0 20px rgba(255, 0, 128, 0.35);
+  --shadow-glow-ir: 0 0 20px rgba(255, 94, 54, 0.35);
+  --shadow-glow-xray: 0 0 20px rgba(157, 0, 255, 0.35);
+}
+
+body {
+  background-color: #060813;
+  color: #e2e8f0;
+  font-family: 'Rajdhani', sans-serif;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+.font-orbitron {
+  font-family: 'Orbitron', sans-serif;
+}
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+.shadow-glow-cyan {
+  box-shadow: 0 0 20px rgba(0, 242, 254, 0.35);
+}
+
+.shadow-glow-pink {
+  box-shadow: 0 0 20px rgba(255, 0, 128, 0.35);
+}
+
+.shadow-glow-ir {
+  box-shadow: 0 0 20px rgba(255, 94, 54, 0.35);
+}
+
+.shadow-glow-xray {
+  box-shadow: 0 0 20px rgba(157, 0, 255, 0.35);
+}
+
+.glass-panel {
+  background: rgba(13, 18, 36, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+}
+
+.glass-panel-active {
+  border-color: rgba(0, 242, 254, 0.8);
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.25);
+}
+
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    rgba(0, 242, 254, 0.05) 50%,
+    rgba(0, 242, 254, 0.05)
+  );
+  background-size: 100% 4px;
+}
+
+@keyframes radarPulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.radar-pulse {
+  animation: radarPulse 3s infinite ease-in-out;
+}
+
+@keyframes borderGlow {
+  0%,
+  100% {
+    border-color: rgba(0, 242, 254, 0.3);
+  }
+  50% {
+    border-color: rgba(0, 242, 254, 0.8);
+  }
+}
+
+.hud-border-glow {
+  animation: borderGlow 2s infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(6, 8, 19, 0.8);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 242, 254, 0.4);
+  border-radius: 3px;
+}
